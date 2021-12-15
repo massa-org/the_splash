@@ -1,3 +1,7 @@
+## [0.1.0+2] - 2021-12-15
+
+- update readme 
+
 ## [0.1.0+1] - 2021-12-15
 
 - fix package description

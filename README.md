@@ -1,3 +1,5 @@
+[![Pub Version](https://img.shields.io/pub/v/the_splash?style=flat-square)](https://pub.dev/packages/the_splash)
+
 That package simplify native and second splash creation
 
 It use [flutter_native_splash](https://pub.dev/packages/flutter_native_splash) to create native splash and provide `SplashScreen` widget that looks exactly like native splash
@@ -14,10 +16,6 @@ Add dependencies
 ```yaml
 dependencies:
     the_splash: ^0.1.0
-
-# required to launch native splash generation script
-dev_dependencies:
-    flutter_native_splash: ^1.3.0
 ```
 
 # Usage
