@@ -1,0 +1,28 @@
+name: the_splash
+description: A new Flutter package project.
+version: 0.1.0
+homepage: https://github.com/massa-org/the_splash
+
+environment:
+  sdk: ">=2.15.0 <3.0.0"
+  flutter: ">=2.5.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  yaml: ^3.1.0
+  
+  # F.T.S. we need this in direct deps cause we need to launch createSplash()
+  # another solution remove this from deps and force user to run `flutter pub run flutter_native_splash:create` manualy
+  # third way is to launch `process.start` from the_splash script byt user can use fvm or other tools
+  # all ways looks bad :[
+  #  
+  # "Evil is evil. Lesser, greater, middling, it's all the same"
+  flutter_native_splash: ^1.3.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^1.0.0
+
+  
