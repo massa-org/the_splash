@@ -26,7 +26,7 @@ dev_dependencies:
 
 **WARN:** right now package only work with config in `flutter_native_splash.yaml` file
 
-Configure the native splash by this [instruction](https://pub.dev/packages/flutter_native_splash#usage).
+Configure the native splash following this [instruction](https://pub.dev/packages/flutter_native_splash#usage).
 
 ## 2. Configure assets
 ```yaml
