@@ -14,6 +14,7 @@ class SplashOptions {
   final Color? darkColor;
   final String? lightImage;
   final String? darkImage;
+  final bool fullscreen;
 
   final SplashGravity androidGravity;
   final SplashGravity iosGravity;
@@ -21,9 +22,9 @@ class SplashOptions {
 
   /// return splash gravity for current platform
   SplashGravity get gravity {
-    if (kIsWeb) return webGravity;
-    if (Platform.isAndroid) return androidGravity;
-    if (Platform.isIOS) return iosGravity;
+    if (UniversalPlatform.isWeb) return webGravity;
+    if (UniversalPlatform.isAndroid) return androidGravity;
+    if (UniversalPlatform.isIOS) return iosGravity;
     return SplashGravity.fromJson(null);
   }
 
@@ -36,6 +37,7 @@ class SplashOptions {
       SplashGravity.fromJson(json['android_gravity']),
       SplashGravity.fromJson(json['ios_content_mode']),
       SplashGravity.fromJson(json['web_image_mode']),
+      (json['fullscreen'] as bool?) ?? false,
     );
   }
 
@@ -47,5 +49,6 @@ class SplashOptions {
     this.androidGravity,
     this.iosGravity,
     this.webGravity,
+    this.fullscreen,
   );
 }

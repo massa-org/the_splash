@@ -15,7 +15,7 @@ It use [flutter_native_splash](https://pub.dev/packages/flutter_native_splash) t
 Add dependencies
 ```yaml
 dependencies:
-    the_splash: ^0.1.0
+    the_splash: ^0.2.0
 ```
 
 # Usage
@@ -61,7 +61,6 @@ You also can create custom splash based on preload data for example see [splash_
 
 Now package has some unsoported configuration options from `flutter_native_splash`
 List of it:
-- fullscreen
 - android_gravity - center_horizontal, center_vertical, clip_horizontal, clip_vertical, end, fill_horizontal, fill_vertical, start
 
 **WARN:** Not properly tested if only one theme defined.

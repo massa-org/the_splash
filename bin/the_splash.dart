@@ -1,6 +1,6 @@
 #!/usr/bin/env dart
 
-import 'dart:io';
+import 'package:universal_io/io.dart';
 
 import 'package:flutter_native_splash/flutter_native_splash.dart';
 

@@ -1,3 +1,8 @@
+## [0.2.0] - 2021-12-16
+
+- feat: add fullscreen support
+- fix: web support
+
 ## [0.1.1] - 2021-12-16
 
 - fix dart version

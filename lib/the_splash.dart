@@ -1,13 +1,11 @@
 library the_splash;
 
 import 'dart:async';
-import 'dart:io';
-import 'dart:ui' as ui;
 import 'dart:ui';
 
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:universal_platform/universal_platform.dart';
 import 'package:yaml/yaml.dart';
 
 part 'preload_asset_images.dart';

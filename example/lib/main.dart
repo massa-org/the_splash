@@ -6,6 +6,8 @@ void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   await SplashScreenData.preload();
+  // delay to check native splash
+  await Future.delayed(const Duration(seconds: 4));
 
   runApp(const MyApp());
 }
@@ -18,6 +20,7 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
+  // delay to check second splash
   final Future<void> init = Future.delayed(const Duration(seconds: 4));
   // This widget is the root of your application.
   @override

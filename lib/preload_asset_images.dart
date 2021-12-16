@@ -13,7 +13,7 @@ Future<ImageProvider> _preloadImage(
   late ImageStreamListener listener;
   listener = ImageStreamListener(
     (ImageInfo imageInfo, bool synchronousCall) {
-      imageInfo.image.toByteData(format: ui.ImageByteFormat.rawUnmodified).then(
+      imageInfo.image.toByteData(format: ImageByteFormat.rawUnmodified).then(
         (ByteData? byteData) async {
           imageStream.removeListener(listener);
           completer.complete();
