@@ -17,17 +17,12 @@ class SplashScreen extends StatelessWidget {
       backgroundColor: brightness == Brightness.dark
           ? options.darkColor ?? const Color(0xff303030)
           : options.lightColor ?? const Color(0xffffffff),
-      body: Column(
-        crossAxisAlignment: CrossAxisAlignment.stretch,
-        children: [
-          Expanded(
-            child: Image(
-              image: image,
-              alignment: options.gravity.alignment,
-              fit: options.gravity.fit,
-            ),
-          ),
-        ],
+      body: SizedBox.expand(
+        child: Image(
+          image: image,
+          alignment: options.gravity.alignment,
+          fit: options.gravity.fit,
+        ),
       ),
     );
   }

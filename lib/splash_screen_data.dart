@@ -1,9 +1,10 @@
 part of the_splash;
 
-/// native splash data holder used to access image and option in native splash widget
+/// native splash data holder used to load and access image, option in native splash widget
 class SplashScreenData {
   SplashScreenData._();
 
+  /// provider for current splash image, that already loaded and decoded
   static late ImageProvider image;
   static late SplashOptions options;
 

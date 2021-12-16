@@ -1,10 +1,10 @@
 name: the_splash
-description: That package simplify native and second splash creation
-version: 0.1.0+2
+description: Provide SplashScreen widget that looks exactly like flutter_native_splash, and utils to build your own splash
+version: 0.1.1
 homepage: https://github.com/massa-org/the_splash
 
 environment:
-  sdk: ">=2.15.0 <3.0.0"
+  sdk: ">=2.14.4 <3.0.0"
   flutter: ">=2.5.0"
 
 dependencies:

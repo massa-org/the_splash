@@ -1,10 +1,14 @@
 part of the_splash;
 
+/// SplashGravity define how image must be displayed
 class SplashGravity {
   final Alignment alignment;
   final BoxFit fit;
 
-  SplashGravity._([this.alignment = Alignment.center, this.fit = BoxFit.none]);
+  SplashGravity._([
+    this.alignment = Alignment.center,
+    this.fit = BoxFit.none,
+  ]);
 
   factory SplashGravity.fromJson(String? json) {
     switch (json) {
