@@ -1,3 +1,7 @@
+## [0.2.1] - 2022-06-05
+
+- fix: process situation when MediaQuery is not exists
+
 ## [0.2.0] - 2021-12-16
 
 - feat: add fullscreen support
