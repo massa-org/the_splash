@@ -15,7 +15,7 @@ It use [flutter_native_splash](https://pub.dev/packages/flutter_native_splash) t
 Add dependencies
 ```yaml
 dependencies:
-    the_splash: ^0.2.0
+    the_splash: ^0.3.0
 ```
 
 # Usage

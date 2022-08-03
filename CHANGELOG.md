@@ -1,3 +1,10 @@
+## [0.3.0] - 2022-08-03
+
+fix:
+- improve error reports in `SplashScreenData.preload`
+deps:
+- update flutter native splash to `^2.0.0`
+
 ## [0.2.1] - 2022-06-05
 
 - fix: process situation when MediaQuery is not exists

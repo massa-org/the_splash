@@ -2,7 +2,7 @@
 
 import 'package:universal_io/io.dart';
 
-import 'package:flutter_native_splash/flutter_native_splash.dart';
+import 'package:flutter_native_splash/cli_commands.dart';
 
 void main(List<String> args) async {
   createSplash();
@@ -43,17 +43,17 @@ void main(List<String> args) async {
   }
 
   androidLight.asMap().forEach((key, value) {
-    File(androidRoot + value + 'splash.png')
-        .copySync(flutterRoot + flutter[key] + '/splash.png');
+    File('$androidRoot${value}splash.png')
+        .copySync('$flutterRoot${flutter[key]}/splash.png');
   });
 
   // stupid, simple and buggy
   final hasDarkImage =
-      File(androidRoot + androidDark[0] + 'splash.png').existsSync();
+      File('$androidRoot${androidDark[0]}splash.png').existsSync();
   if (hasDarkImage) {
     androidDark.asMap().forEach((key, value) {
-      File(androidRoot + value + 'splash.png')
-          .copySync(flutterRoot + flutter[key] + '/splash_dark.png');
+      File('$androidRoot${value}splash.png')
+          .copySync('$flutterRoot${flutter[key]}/splash_dark.png');
     });
   }
 }
