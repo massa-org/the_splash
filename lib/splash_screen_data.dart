@@ -8,26 +8,45 @@ class SplashScreenData {
   static late ImageProvider image;
   static late SplashOptions options;
 
-  // preload splash image and options
-  static Future<void> preload() async {
-    final dpi = window.devicePixelRatio;
-    final brightness = window.platformBrightness;
+  static Future<void> _preloadOptions() async {
+    try {
+      options = await rootBundle.loadStructuredData(
+        'flutter_native_splash.yaml',
+        (v) async => SplashOptions.fromJson(
+          loadYaml(v)['flutter_native_splash'],
+        ),
+      );
+    } catch (error) {
+      // todo check error is load error or parse error
+      throw Exception(
+        'the_splash: can\'t load splash screen configuration from flutter_native_splash.yaml file',
+      );
+    }
+  }
 
-    await Future.wait([
-      rootBundle
-          .loadStructuredData(
-            'flutter_native_splash.yaml',
-            (v) async => SplashOptions.fromJson(
-              loadYaml(v)['flutter_native_splash'],
-            ),
-          )
-          .then((value) => options = value),
-      _preloadAssetImage(
+  static Future<void> _preloadImage() async {
+    try {
+      final dpi = window.devicePixelRatio;
+      final brightness = window.platformBrightness;
+      image = await _preloadAssetImage(
         brightness == Brightness.dark
             ? 'assets/generated/splash_dark.png'
             : 'assets/generated/splash.png',
         dpi: dpi,
-      ).then((value) => image = value),
+      );
+    } catch (error) {
+      throw Exception(
+        'the_splash: error while preload generated splash image'
+        'maybe you forgot to run `flutter pub run the_splash` command',
+      );
+    }
+  }
+
+  // preload splash image and options
+  static Future<void> preload() async {
+    await Future.wait([
+      _preloadOptions(),
+      _preloadImage(),
     ]);
   }
 }
