@@ -1,6 +1,6 @@
 name: the_splash
 description: Provide SplashScreen widget that looks exactly like flutter_native_splash, and utils to build your own splash
-version: 0.3.0
+version: 0.3.1
 repository: https://github.com/massa-org/the_splash
 
 environment:
@@ -18,7 +18,7 @@ dependencies:
   # all ways looks bad :[
   #  
   # "Evil is evil. Lesser, greater, middling, it's all the same"
-  flutter_native_splash: ^2.0.0
+  flutter_native_splash: ^2.2.0
   universal_io: ^2.0.4
   universal_platform: ^1.0.0+1
 

@@ -5,7 +5,7 @@ import 'package:universal_io/io.dart';
 import 'package:flutter_native_splash/cli_commands.dart';
 
 void main(List<String> args) async {
-  createSplash();
+  createSplash(path: null, flavor: null);
 
   // TODO use path instead of string concat
 

@@ -1,3 +1,8 @@
+## [0.3.1] - 2022-08-03
+
+fix:
+- flutter_native_splash signature change
+
 ## [0.3.0] - 2022-08-03
 
 fix:
